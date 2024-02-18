@@ -1,0 +1,146 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "style/bulma.css" %}">
+    <link rel="stylesheet" href="{% static "style/style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NEDVIGA</title>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #D9D9D9">
+    <div class="navbar-brand ml-6">
+        <a class="navbar-item" href="https://bulma.io">
+            <h1 class="title">NEDVIGA <i class="fa-solid fa-code"></i> </h1>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <a class="title is-5">Недвижимость</a>
+            </div>
+            <div class="navbar-item">
+                <a href="#a1" class="title is-5 mr-6">О нас</a>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+<section class="hero is-large is-info"
+         style="background-image: url({% static "img/img.svg" %}); background-size: cover">
+    <div class="hero-body">
+        <div class="columns">
+            <div class="column is-8"></div>
+            <div class="column ">
+                <h1 class="title is-1">
+                    NEDVIGA
+                </h1>
+                <h1 class="subtitle">
+                    Агенство недвижимости
+                </h1>
+                <button class="button has-text-white" style="background-color: red">
+                    Подобрать квартиру
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section has-background-black-bis">
+    <h1 class="title has-text-centered mb-6 is-1 has-text-white">
+        Недвижимость
+    </h1>
+    <div class="columns is-centered">
+        <div class="column is-4" style="display: flex; justify-content: center">
+            <div class="card-img-nedviga1">
+                <img src="{% static "img/img1.svg " %}">
+                <h1 class="title has-text-centered mt-4 has-text-white">Новостройки</h1>
+            </div>
+        </div>
+        <div class="column is-4" style="display: flex; justify-content: center">
+            <div class="card-img-nedviga1">
+                <img src="{% static "img/img (1).svg " %}">
+                <h1 class="title has-text-centered mt-4 has-text-white">Элитная</h1>
+            </div>
+
+        </div>
+        <div class="column is-4" style="display: flex; justify-content: center">
+            <div class="card-img-nedviga1">
+                <img src="{% static "img/img (2).svg " %}">
+                <h1 class="title has-text-centered mt-4 has-text-white">Загородная</h1>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="section  ">
+
+    <h1 class="title is-1 has-text-centered" id="a1">О Нас</h1>
+    <div class="columns mt-6">
+        <div class="column is-6" style="display: flex; justify-content: center">
+            <img src="{% static 'img/img (3).svg' %}" alt="">
+        </div>
+        <div class="column">
+            <h1 class="subtitle">
+                Мы работаем на рынке недвижимости и помогаем <br>
+                людям обрести дом. Желание создать качественно <br> новый формат услуг в этой области и стало основой
+                <br> для развития нашей компании.
+                <br><br>
+                NEDVIGA - то, что мы можем дать тебе!
+            </h1>
+            <br><br>
+            <a class="title has-text-danger">Узнать больше <i class="fa-sharp fa-solid fa-user-secret"></i></a>
+            <div class="columns is-centered mt-6 box">
+                <div class="column">
+                    <h1 class="title is-1 has-text-danger">10</h1>
+                    <p class="subtitle">дней на рынке</p>
+                </div>
+                <div class="column">
+                    <h1 class="title is-1 has-text-danger">100 000</h1>
+                    <p class="subtitle">недовольных клиентов</p>
+                </div>
+                <div class="column">
+                    <h1 class="title is-1 has-text-danger">10 000</h1>
+                    <p class="subtitle">не закрытых сделок</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="hero is-medium has-background-black-bis">
+  <div class="hero-body">
+    <div class="columns is-centered">
+        <div class="column is-4 ">
+            <h1 class="title is-1 has-text-centered has-text-white">
+                Заказать звонок
+            </h1>
+            <form action="" method="post" class="has-text-white">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="button mt-6">
+                    Отправить
+                </button>
+            </form>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
